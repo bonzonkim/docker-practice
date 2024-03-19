@@ -1,0 +1,10 @@
+{
+  "name": "nodejs-docker",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}

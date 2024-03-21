@@ -10,16 +10,19 @@ services:
       - ghostdk:/var/lib/ghost/content
     environment:
       database__client: mysql
-      database__connection_user: root
-      database__connection_password: example
-      database__connection_database: ghost
-      database__connection_host: db
+      database__connection__user: root
+      database__connection__password: example
+      database__connection__database: ghost
+      database__connection__host: db
       url: http://localhost:60000
+    links:
+      - db
 
   db:
     image: mariadb:10.9
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+
 volumes:
-  ghostdk:
+  ghostdk: 
